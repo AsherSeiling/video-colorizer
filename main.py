@@ -20,11 +20,8 @@ def getImages():
 	dirs = os.listdir("input")
 	finalDir = []
 	for i in dirs:
-		if i.split(".")[1].lower() == "png":
-			finalDir.append(i)
-		elif i.split(".")[1].lower() == "jpg":
-			finalDir.append(i)
-		elif i.split(".")[1].lower() == "jpeg":
+		ref = ["jpg", "jpeg", "png"]
+		if i.split(".")[1].lower() in ref:
 			finalDir.append(i)
 	return finalDir
 
